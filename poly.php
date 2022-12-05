@@ -1,0 +1,10 @@
+<?php
+$img=imagecreatetruecolor(500,250);
+$white=imagecolorallocate($img,255,255,255);
+$blue=imagecolorallocate($img,0,0,105);
+imagefill($img,0,0,$blue);
+imagepolygon($img,array(100,50,50,100,150,100),3,$white);
+header('content-type:image.jpeg');
+imagejpeg($img);
+imagedestroy($img);
+?>
